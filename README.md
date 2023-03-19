@@ -9,11 +9,11 @@ Hardware: 3 pushbuttons, and a switch for "location", as well as speakers and wi
 
 # Code
 The program is broken up into three main components. These include handling button input, playing songs from a predetermined list, and actions based on the current location of the user
-## button handling
+## Button Handling
 It uses the built-in GPIO library included with the Raspberry Pi to read the inputs from the buttons themselves. The prototype includes three buttons. One button is used for playing or pausing music. The other two buttons are used for playing the next or previous song. 
-## playing from a predetermined list
+## Playing From A Predetermined List
 There is a list of songs containing the full paths of their location on the system. Then the system is first started, it loads the first song from the list into the VLC media player. Then the next or previous buttons are pressed, it stops the current song and gets either the next for previous song in the list. It uses the idea of circular arrays where the list cycles back to the beginning.
-## actions based on location of the user
+## Actions Based On Location Of The User
 The program can load a location structure from a separate file. This structure has text to send to their user, the location, and an audio file.
 ```code
 testStruct = {
